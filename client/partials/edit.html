@@ -1,0 +1,10 @@
+<div ng-controller='editController'>
+	<div ng-if='friend'>
+		<form >
+			<p><input type="text" ng-attr-value="{{friend.first_name}}" ng-model='oldFriend.first_name'></p>
+			<p><input type="text" ng-attr-value="{{friend.last_name}}" ng-model='oldFriend.last_name'></p>
+			<p><input type="date" ng-attr-value="{{friend.birth_day}}" ng-model='oldFriend.birth_day'></p>
+			<input type="submit" value="Update" ng-click='update()'>
+		</form>
+	</div>
+</div>

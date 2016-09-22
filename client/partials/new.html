@@ -1,0 +1,11 @@
+<div ng-controller='newController'>
+All friends!
+<p>Filter: <input type="text" ng-model='filter'></p>
+<div ng-if='friends'>
+	<div ng-repeat='x in friends | filter: filter'>
+		<p>Name: {{ x.first_name }} {{ x.last_name }} | <a href="#/show/{{ x._id }}">Show</a> | <a href="#/edit/{{ x._id }}">Edit</a> | <button ng-click='delete(x._id)'>Delete</button></p>
+		<p>Birthday: {{ x.birth_day }}</p>
+	</div>
+</div>
+<a href="#/create">Add New Friend</a>
+</div>
